@@ -1,0 +1,4 @@
+package io.grpc.benchmarks.netty.generated;
+public class StreamingResponseBandwidthBenchmark_AdditionalCounters_jmh extends StreamingResponseBandwidthBenchmark_AdditionalCounters_jmh_B3 {
+}
+

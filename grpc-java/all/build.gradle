@@ -1,0 +1,58 @@
+description = "gRPC: All"
+
+// Make sure that no transitive dependencies are included.
+configurations.compile.transitive = false
+
+for (subproject in rootProject.subprojects) {
+    if (subproject == project) {
+        continue
+    }
+    evaluationDependsOn(subproject.path)
+}
+
+dependencies {
+    compile project(':grpc-auth'),
+            project(':grpc-core'),
+            project(':grpc-netty'),
+            project(':grpc-okhttp'),
+            project(':grpc-protobuf'),
+            project(':grpc-protobuf-nano'),
+            project(':grpc-stub')
+}
+
+// Create a fat jar containing only the direct dependencies
+jar {
+    from {
+        configurations.compile.collect {
+            it.isDirectory() ? it : zipTree(it)
+        }
+    }
+}
+
+javadoc {
+    classpath = files(rootProject.subprojects.collect { subproject ->
+        subproject.javadoc.classpath
+    })
+    for (subproject in rootProject.subprojects) {
+        if (subproject == project) {
+            continue;
+        }
+        source subproject.javadoc.source
+        options.links subproject.javadoc.options.links.toArray(new String[0])
+    }
+}
+
+task jacocoMerge(type: JacocoMerge) {
+    destinationFile = file("${buildDir}/jacoco/test.exec")
+    executionData = files(rootProject.subprojects.jacocoTestReport.executionData)
+        .minus(files("${buildDir}/jacoco/test.exec"))
+        .filter { f -> f.exists() }
+}
+
+jacocoTestReport {
+    dependsOn(jacocoMerge)
+
+    additionalSourceDirs = files(rootProject.subprojects.sourceSets.main.allSource.srcDirs)
+    sourceDirectories = files(rootProject.subprojects.sourceSets.main.allSource.srcDirs)
+    classDirectories = files(rootProject.subprojects.sourceSets.main.output)
+}

@@ -1,0 +1,38 @@
+sudo: false
+
+language: java
+
+env:
+  global:
+    - LDFLAGS=-L/tmp/proto3-a3/lib
+    - CXXFLAGS=-I/tmp/proto3-a3/include
+    - LD_LIBRARY_PATH=/tmp/proto3-a3/lib
+    - PATH=/tmp/proto3-a3/bin:$PATH
+
+before_install:
+  - buildscripts/make_dependencies.sh # build protoc into /tmp/proto3-a3
+  - mkdir -p $HOME/.gradle
+  - echo "checkstyle.ignoreFailures=false" >> $HOME/.gradle/gradle.properties
+
+before_script:
+  - test -z "$(git status --porcelain)" || (git status && echo Error Working directory is not clean. Forget to commit generated files? && false)
+
+jdk:
+  - oraclejdk8
+
+os:
+  - linux
+
+notifications:
+  email: false
+
+cache:
+  directories:
+    - /tmp/proto3-a3
+    - $HOME/.m2/repository/io/netty
+    - $HOME/.gradle/caches/modules-2
+    - $HOME/.gradle/wrapper
+
+before_cache:
+  - rm $HOME/.gradle/caches/modules-2/modules-2.lock
+  - find $HOME/.gradle/wrapper -not -name "*-all.zip" -and -not -name "*-bin.zip" -delete

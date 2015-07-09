@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="io.grpc.transport.netty.NettyClientHandlerTest" tests="21" skipped="0" failures="0" errors="0" timestamp="2015-06-29T02:22:11" hostname="xwu-desktop" time="0.661">
+  <properties/>
+  <testcase name="cancelTwiceShouldSucceed" classname="io.grpc.transport.netty.NettyClientHandlerTest" time="0.422"/>
+  <testcase name="sendFrameShouldSucceed" classname="io.grpc.transport.netty.NettyClientHandlerTest" time="0.015"/>
+  <testcase name="inboundHeadersShouldForwardToStream" classname="io.grpc.transport.netty.NettyClientHandlerTest" time="0.015"/>
+  <testcase name="connectionWindowShouldBeOverridden" classname="io.grpc.transport.netty.NettyClientHandlerTest" time="0.009"/>
+  <testcase name="receivedGoAwayShouldFailUnknownBufferedStreams" classname="io.grpc.transport.netty.NettyClientHandlerTest" time="0.021"/>
+  <testcase name="channelShutdownShouldCancelBufferedStreams" classname="io.grpc.transport.netty.NettyClientHandlerTest" time="0.01"/>
+  <testcase name="cancelBufferedStreamShouldChangeClientStreamStatus" classname="io.grpc.transport.netty.NettyClientHandlerTest" time="0.01"/>
+  <testcase name="cancelStreamShouldCreateAndThenFailBufferedStream" classname="io.grpc.transport.netty.NettyClientHandlerTest" time="0.011"/>
+  <testcase name="ping_failsOnConnectionError" classname="io.grpc.transport.netty.NettyClientHandlerTest" time="0.017"/>
+  <testcase name="receivedGoAwayShouldCancelBufferedStream" classname="io.grpc.transport.netty.NettyClientHandlerTest" time="0.011"/>
+  <testcase name="inboundDataShouldForwardToStream" classname="io.grpc.transport.netty.NettyClientHandlerTest" time="0.01"/>
+  <testcase name="ping_failsWhenChannelCloses" classname="io.grpc.transport.netty.NettyClientHandlerTest" time="0.008"/>
+  <testcase name="createIncrementsIdsForActualAndBufferdStreams" classname="io.grpc.transport.netty.NettyClientHandlerTest" time="0.015"/>
+  <testcase name="ping" classname="io.grpc.transport.netty.NettyClientHandlerTest" time="0.012"/>
+  <testcase name="ping_failsIfChannelClosed" classname="io.grpc.transport.netty.NettyClientHandlerTest" time="0.007"/>
+  <testcase name="cancelWhileBufferedShouldSucceed" classname="io.grpc.transport.netty.NettyClientHandlerTest" time="0.009"/>
+  <testcase name="sendForUnknownStreamShouldFail" classname="io.grpc.transport.netty.NettyClientHandlerTest" time="0.008"/>
+  <testcase name="createStreamShouldSucceed" classname="io.grpc.transport.netty.NettyClientHandlerTest" time="0.009"/>
+  <testcase name="channelShutdownShouldFailInFlightStreams" classname="io.grpc.transport.netty.NettyClientHandlerTest" time="0.015"/>
+  <testcase name="cancelShouldSucceed" classname="io.grpc.transport.netty.NettyClientHandlerTest" time="0.011"/>
+  <testcase name="receivedGoAwayShouldFailUnknownStreams" classname="io.grpc.transport.netty.NettyClientHandlerTest" time="0.009"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Jun 29, 2015 10:22:12 AM io.netty.util.ResourceLeakDetector reportLeak
+SEVERE: LEAK: ByteBuf.release() was not called before it's garbage-collected. Enable advanced leak reporting to find out where the leak occurred. To enable advanced leak reporting, specify the JVM option '-Dio.netty.leakDetectionLevel=advanced' or call ResourceLeakDetector.setLevel() See http://netty.io/wiki/reference-counted-objects.html for more information.
+Jun 29, 2015 10:22:12 AM io.grpc.transport.netty.NettyClientHandler$LazyFrameListener onPingAckRead
+WARNING: Received unexpected ping ack. Expecting -8096484096866735442, got -8096484096866735443
+]]></system-err>
+</testsuite>

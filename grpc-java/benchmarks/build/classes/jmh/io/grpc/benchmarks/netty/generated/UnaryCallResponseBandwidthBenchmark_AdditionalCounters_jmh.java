@@ -1,0 +1,4 @@
+package io.grpc.benchmarks.netty.generated;
+public class UnaryCallResponseBandwidthBenchmark_AdditionalCounters_jmh extends UnaryCallResponseBandwidthBenchmark_AdditionalCounters_jmh_B3 {
+}
+

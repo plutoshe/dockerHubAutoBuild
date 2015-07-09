@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="io.grpc.ServerImplTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2015-06-29T02:21:47" hostname="xwu-desktop" time="0.05">
+  <properties/>
+  <testcase name="startStopImmediate" classname="io.grpc.ServerImplTest" time="0.013"/>
+  <testcase name="startStopImmediateWithChildTransport" classname="io.grpc.ServerImplTest" time="0.002"/>
+  <testcase name="transportServerFailsStartup" classname="io.grpc.ServerImplTest" time="0.001"/>
+  <testcase name="exceptionInStartCallPropagatesToStream" classname="io.grpc.ServerImplTest" time="0.016"/>
+  <testcase name="basicExchangeSuccessful" classname="io.grpc.ServerImplTest" time="0.016"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Jun 29, 2015 10:21:48 AM io.grpc.SerializingExecutor$TaskRunner run
+SEVERE: Exception while executing runnable io.grpc.ServerImpl$ServerTransportListenerImpl$1@12036483
+io.grpc.StatusRuntimeException: ABORTED: Oh, no!
+	at io.grpc.Status.asRuntimeException(Status.java:428)
+	at io.grpc.ServerImplTest$3.startCall(ServerImplTest.java:235)
+	at io.grpc.ServerImpl$ServerTransportListenerImpl.startCall(ServerImpl.java:287)
+	at io.grpc.ServerImpl$ServerTransportListenerImpl.access$900(ServerImpl.java:237)
+	at io.grpc.ServerImpl$ServerTransportListenerImpl$1.run(ServerImpl.java:270)
+	at io.grpc.SerializingExecutor$TaskRunner.run(SerializingExecutor.java:154)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+]]></system-err>
+</testsuite>

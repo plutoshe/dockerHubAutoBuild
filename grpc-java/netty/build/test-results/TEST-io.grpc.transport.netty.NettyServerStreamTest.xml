@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="io.grpc.transport.netty.NettyServerStreamTest" tests="16" skipped="0" failures="0" errors="0" timestamp="2015-06-29T02:22:12" hostname="xwu-desktop" time="0.12">
+  <properties/>
+  <testcase name="duplicateWriteHeadersShouldFail" classname="io.grpc.transport.netty.NettyServerStreamTest" time="0.05"/>
+  <testcase name="closeAfterClientHalfCloseShouldSucceed" classname="io.grpc.transport.netty.NettyServerStreamTest" time="0.005"/>
+  <testcase name="emptyFramerShouldSendNoPayload" classname="io.grpc.transport.netty.NettyServerStreamTest" time="0.005"/>
+  <testcase name="writeMessageShouldSendResponse" classname="io.grpc.transport.netty.NettyServerStreamTest" time="0.005"/>
+  <testcase name="abortStreamAndNotSendStatus" classname="io.grpc.transport.netty.NettyServerStreamTest" time="0.005"/>
+  <testcase name="closeBeforeClientHalfCloseShouldSucceed" classname="io.grpc.transport.netty.NettyServerStreamTest" time="0.005"/>
+  <testcase name="abortStreamAndSendStatus" classname="io.grpc.transport.netty.NettyServerStreamTest" time="0.004"/>
+  <testcase name="closeWithErrorBeforeClientHalfCloseShouldSucceed" classname="io.grpc.transport.netty.NettyServerStreamTest" time="0.004"/>
+  <testcase name="writeHeadersShouldSendHeaders" classname="io.grpc.transport.netty.NettyServerStreamTest" time="0.004"/>
+  <testcase name="abortStreamAfterClientHalfCloseShouldCallClose" classname="io.grpc.transport.netty.NettyServerStreamTest" time="0.004"/>
+  <testcase name="inboundMessageShouldCallListener" classname="io.grpc.transport.netty.NettyServerStreamTest" time="0.004"/>
+  <testcase name="notifiedOnReadyAfterWriteCompletes" classname="io.grpc.transport.netty.NettyServerStreamTest" time="0.005"/>
+  <testcase name="shouldNotBeReadyForDataAfterWritingLargeMessage" classname="io.grpc.transport.netty.NettyServerStreamTest" time="0.005"/>
+  <testcase name="closedShouldNotBeReady" classname="io.grpc.transport.netty.NettyServerStreamTest" time="0.004"/>
+  <testcase name="shouldBeImmediatelyReadyForData" classname="io.grpc.transport.netty.NettyServerStreamTest" time="0.003"/>
+  <testcase name="shouldBeReadyForDataAfterWritingSmallMessage" classname="io.grpc.transport.netty.NettyServerStreamTest" time="0.004"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

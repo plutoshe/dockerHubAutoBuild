@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="io.grpc.transport.netty.NettyClientTransportTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2015-06-29T02:22:12" hostname="xwu-desktop" time="0.595">
+  <properties/>
+  <testcase name="bufferedStreamsShouldBeClosedWhenConnectionTerminates" classname="io.grpc.transport.netty.NettyClientTransportTest" time="0.487"/>
+  <testcase name="creatingMultipleTlsTransportsShouldSucceed" classname="io.grpc.transport.netty.NettyClientTransportTest" time="0.108"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Jun 29, 2015 10:22:13 AM io.netty.handler.codec.http2.Http2ConnectionHandler$3 operationComplete
+SEVERE: Sending GOAWAY failed: lastStreamId '0', errorCode '2', debugData 'Pending write on removal of SslHandler'. Forcing shutdown of the connection.
+javax.net.ssl.SSLException: SSLEngine closed already
+
+Jun 29, 2015 10:22:13 AM io.netty.handler.codec.http2.Http2ConnectionHandler$3 operationComplete
+SEVERE: Sending GOAWAY failed: lastStreamId '0', errorCode '2', debugData 'Pending write on removal of SslHandler'. Forcing shutdown of the connection.
+javax.net.ssl.SSLException: SSLEngine closed already
+
+]]></system-err>
+</testsuite>

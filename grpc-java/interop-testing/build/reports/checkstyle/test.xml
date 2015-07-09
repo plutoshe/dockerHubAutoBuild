@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="6.5">
+<file name="/home/xwu/Desktop/test/grpc-java/interop-testing/src/test/java/io/grpc/stub/StubConfigTest.java">
+</file>
+<file name="/home/xwu/Desktop/test/grpc-java/interop-testing/src/test/java/io/grpc/testing/integration/Http2NettyLocalChannelTest.java">
+</file>
+<file name="/home/xwu/Desktop/test/grpc-java/interop-testing/src/test/java/io/grpc/testing/integration/Http2NettyTest.java">
+</file>
+<file name="/home/xwu/Desktop/test/grpc-java/interop-testing/src/test/java/io/grpc/testing/integration/Http2OkHttpTest.java">
+</file>
+</checkstyle>

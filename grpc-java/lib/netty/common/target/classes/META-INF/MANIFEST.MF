@@ -1,0 +1,30 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1435401979241
+Build-Jdk: 1.7.0_79
+Built-By: xwu
+Bundle-Description: Netty is an asynchronous event-driven network applic
+ ation framework for    rapid development of maintainable high performan
+ ce protocol servers and    clients.
+Bundle-DocURL: http://netty.io/
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Netty/Common
+Bundle-SymbolicName: io.netty.common
+Bundle-Vendor: The Netty Project
+Bundle-Version: 4.1.0.Beta5
+Created-By: Apache Maven Bundle Plugin
+Export-Package: io.netty.util;version="4.1.0.Beta5",io.netty.util.collec
+ tion;version="4.1.0.Beta5",io.netty.util.concurrent;version="4.1.0.Beta
+ 5";uses:="io.netty.util.internal",io.netty.util.internal;version="4.1.0
+ .Beta5";uses:="io.netty.util,io.netty.util.concurrent,javassist,javax.s
+ ecurity.cert",io.netty.util.internal.chmv8;version="4.1.0.Beta5",io.net
+ ty.util.internal.logging;version="4.1.0.Beta5"
+Import-Package: sun.misc;resolution:=optional,javassist;version="[3.19,4
+ )";resolution:=optional,javax.security.cert,org.apache.commons.logging;
+ version="[1.1,2)";resolution:=optional,org.apache.log4j;version="[1.2,2
+ )";resolution:=optional,org.slf4j;version="[1.7,2)";resolution:=optiona
+ l,org.slf4j.helpers;version="[1.7,2)";resolution:=optional,sun.nio.ch;r
+ esolution:=optional,org.eclipse.jetty.npn;version="[1,2)";resolution:=o
+ ptional,org.eclipse.jetty.alpn;version="[1,2)";resolution:=optional
+Originally-Created-By: Apache Maven Bundle Plugin
+Tool: Bnd-2.1.0.20130426-122213

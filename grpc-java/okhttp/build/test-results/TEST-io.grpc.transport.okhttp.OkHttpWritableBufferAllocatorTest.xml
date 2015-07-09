@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="io.grpc.transport.okhttp.OkHttpWritableBufferAllocatorTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2015-06-29T02:22:16" hostname="xwu-desktop" time="0.001">
+  <properties/>
+  <testcase name="testIsExactBelowMaxCapacity" classname="io.grpc.transport.okhttp.OkHttpWritableBufferAllocatorTest" time="0.0"/>
+  <testcase name="testCapacity" classname="io.grpc.transport.okhttp.OkHttpWritableBufferAllocatorTest" time="0.0"/>
+  <testcase name="testInitialCapacityHasMaximum" classname="io.grpc.transport.okhttp.OkHttpWritableBufferAllocatorTest" time="0.0"/>
+  <testcase name="testBuffersAreDifferent" classname="io.grpc.transport.okhttp.OkHttpWritableBufferAllocatorTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

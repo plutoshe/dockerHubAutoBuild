@@ -1,0 +1,10 @@
+-x
+c++
+--std=c++0x
+-c
+-I
+/home/xwu/Desktop/test/grpc-java/compiler/src/java_plugin/headers
+/home/xwu/Desktop/test/grpc-java/compiler/src/java_plugin/cpp/java_plugin.cpp
+-o
+/home/xwu/Desktop/test/grpc-java/compiler/build/objs/java_pluginExecutable/java_pluginCpp/33pndmuw55jvaqmq46809wztb/java_plugin.o
+-m64

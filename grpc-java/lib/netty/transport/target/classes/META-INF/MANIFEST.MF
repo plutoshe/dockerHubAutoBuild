@@ -1,0 +1,40 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1435401985455
+Build-Jdk: 1.7.0_79
+Built-By: xwu
+Bundle-Description: Netty is an asynchronous event-driven network applic
+ ation framework for    rapid development of maintainable high performan
+ ce protocol servers and    clients.
+Bundle-DocURL: http://netty.io/
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Netty/Transport
+Bundle-SymbolicName: io.netty.transport
+Bundle-Vendor: The Netty Project
+Bundle-Version: 4.1.0.Beta5
+Created-By: Apache Maven Bundle Plugin
+Export-Package: io.netty.bootstrap;version="4.1.0.Beta5";uses:="io.netty
+ .channel,io.netty.resolver,io.netty.util",io.netty.channel;version="4.1
+ .0.Beta5";uses:="io.netty.bootstrap,io.netty.buffer,io.netty.util,io.ne
+ tty.util.concurrent",io.netty.channel.embedded;version="4.1.0.Beta5";us
+ es:="io.netty.channel",io.netty.channel.group;version="4.1.0.Beta5";use
+ s:="io.netty.channel,io.netty.util.concurrent",io.netty.channel.local;v
+ ersion="4.1.0.Beta5";uses:="io.netty.channel",io.netty.channel.nio;vers
+ ion="4.1.0.Beta5";uses:="io.netty.buffer,io.netty.channel,io.netty.util
+ ,io.netty.util.concurrent",io.netty.channel.oio;version="4.1.0.Beta5";u
+ ses:="io.netty.buffer,io.netty.channel",io.netty.channel.pool;version="
+ 4.1.0.Beta5";uses:="io.netty.bootstrap,io.netty.channel,io.netty.util.c
+ oncurrent",io.netty.channel.socket;version="4.1.0.Beta5";uses:="io.nett
+ y.buffer,io.netty.channel,io.netty.util",io.netty.channel.socket.nio;ve
+ rsion="4.1.0.Beta5";uses:="io.netty.buffer,io.netty.channel,io.netty.ch
+ annel.nio,io.netty.channel.socket",io.netty.channel.socket.oio;version=
+ "4.1.0.Beta5";uses:="io.netty.buffer,io.netty.channel,io.netty.channel.
+ oio,io.netty.channel.socket"
+Import-Package: io.netty.buffer;version="[4.1,5)",io.netty.resolver;vers
+ ion="[4.1,5)",io.netty.util;version="[4.1,5)",io.netty.util.concurrent;
+ version="[4.1,5)",io.netty.util.internal;version="[4.1,5)",io.netty.uti
+ l.internal.logging;version="[4.1,5)",sun.nio.ch;resolution:=optional,or
+ g.eclipse.jetty.npn;version="[1,2)";resolution:=optional,org.eclipse.je
+ tty.alpn;version="[1,2)";resolution:=optional
+Originally-Created-By: Apache Maven Bundle Plugin
+Tool: Bnd-2.1.0.20130426-122213

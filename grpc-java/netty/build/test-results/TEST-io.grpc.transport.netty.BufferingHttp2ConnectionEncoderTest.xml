@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="io.grpc.transport.netty.BufferingHttp2ConnectionEncoderTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2015-06-29T02:22:12" hostname="xwu-desktop" time="0.134">
+  <properties/>
+  <testcase name="multipleWritesToActiveStream" classname="io.grpc.transport.netty.BufferingHttp2ConnectionEncoderTest" time="0.013"/>
+  <testcase name="bufferUntilMaxStreamsIncreased" classname="io.grpc.transport.netty.BufferingHttp2ConnectionEncoderTest" time="0.003"/>
+  <testcase name="sendingGoAwayShouldNotFailStreams" classname="io.grpc.transport.netty.BufferingHttp2ConnectionEncoderTest" time="0.002"/>
+  <testcase name="bufferUntilActiveStreamsAreReset" classname="io.grpc.transport.netty.BufferingHttp2ConnectionEncoderTest" time="0.003"/>
+  <testcase name="endStreamDoesNotFailBufferedStream" classname="io.grpc.transport.netty.BufferingHttp2ConnectionEncoderTest" time="0.002"/>
+  <testcase name="receivingGoAwayFailsBufferedStreams" classname="io.grpc.transport.netty.BufferingHttp2ConnectionEncoderTest" time="0.002"/>
+  <testcase name="alternatingWritesToActiveAndBufferedStreams" classname="io.grpc.transport.netty.BufferingHttp2ConnectionEncoderTest" time="0.002"/>
+  <testcase name="ensureCanCreateNextStreamWhenStreamCloses" classname="io.grpc.transport.netty.BufferingHttp2ConnectionEncoderTest" time="0.002"/>
+  <testcase name="rstStreamClosesBufferedStream" classname="io.grpc.transport.netty.BufferingHttp2ConnectionEncoderTest" time="0.002"/>
+  <testcase name="closedBufferedStreamReleasesByteBuf" classname="io.grpc.transport.netty.BufferingHttp2ConnectionEncoderTest" time="0.036"/>
+  <testcase name="bufferingNewStreamFailsAfterGoAwayReceived" classname="io.grpc.transport.netty.BufferingHttp2ConnectionEncoderTest" time="0.002"/>
+  <testcase name="bufferUntilSettingsReceived" classname="io.grpc.transport.netty.BufferingHttp2ConnectionEncoderTest" time="0.064"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

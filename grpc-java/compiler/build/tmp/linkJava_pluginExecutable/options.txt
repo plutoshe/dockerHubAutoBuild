@@ -1,0 +1,14 @@
+-o
+/home/xwu/Desktop/test/grpc-java/compiler/build/binaries/java_pluginExecutable/protoc-gen-grpc-java
+/home/xwu/Desktop/test/grpc-java/compiler/build/objs/java_pluginExecutable/java_pluginCpp/9ilm5s47juv6gqno0d7eigbnq/java_generator.o
+/home/xwu/Desktop/test/grpc-java/compiler/build/objs/java_pluginExecutable/java_pluginCpp/33pndmuw55jvaqmq46809wztb/java_plugin.o
+/home/xwu/Desktop/test/grpc-java/compiler/build/objs/java_pluginExecutable/java_pluginCpp/7m5rh8etv9dw71risqg8vttzk/java_generator.o
+-Wl,-Bstatic
+-lprotoc
+-lprotobuf
+-static-libgcc
+-static-libstdc++
+-Wl,-Bdynamic
+-lpthread
+-s
+-m64

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="io.grpc.testing.integration.Http2NettyTest" tests="17" skipped="0" failures="0" errors="0" timestamp="2015-06-29T02:22:02" hostname="xwu-desktop" time="2.94">
+  <properties/>
+  <testcase name="veryLargeRequest" classname="io.grpc.testing.integration.Http2NettyTest" time="1.117"/>
+  <testcase name="veryLargeResponse" classname="io.grpc.testing.integration.Http2NettyTest" time="1.041"/>
+  <testcase name="exchangeContextUnaryCall" classname="io.grpc.testing.integration.Http2NettyTest" time="0.032"/>
+  <testcase name="emptyUnary" classname="io.grpc.testing.integration.Http2NettyTest" time="0.038"/>
+  <testcase name="pingPong" classname="io.grpc.testing.integration.Http2NettyTest" time="0.126"/>
+  <testcase name="clientStreaming" classname="io.grpc.testing.integration.Http2NettyTest" time="0.033"/>
+  <testcase name="fullDuplexCallShouldSucceed" classname="io.grpc.testing.integration.Http2NettyTest" time="0.032"/>
+  <testcase name="sendsTimeoutHeader" classname="io.grpc.testing.integration.Http2NettyTest" time="0.024"/>
+  <testcase name="serverStreamingShouldBeFlowControlled" classname="io.grpc.testing.integration.Http2NettyTest" time="0.139"/>
+  <testcase name="gracefulShutdown" classname="io.grpc.testing.integration.Http2NettyTest" time="0.077"/>
+  <testcase name="serverStreaming" classname="io.grpc.testing.integration.Http2NettyTest" time="0.031"/>
+  <testcase name="cancelAfterFirstResponse" classname="io.grpc.testing.integration.Http2NettyTest" time="0.055"/>
+  <testcase name="cancelAfterBegin" classname="io.grpc.testing.integration.Http2NettyTest" time="0.032"/>
+  <testcase name="emptyStream" classname="io.grpc.testing.integration.Http2NettyTest" time="0.045"/>
+  <testcase name="halfDuplexCallShouldSucceed" classname="io.grpc.testing.integration.Http2NettyTest" time="0.028"/>
+  <testcase name="exchangeContextStreamingCall" classname="io.grpc.testing.integration.Http2NettyTest" time="0.03"/>
+  <testcase name="largeUnary" classname="io.grpc.testing.integration.Http2NettyTest" time="0.055"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Jun 29, 2015 10:22:05 AM io.grpc.transport.netty.ProtocolNegotiators$AbstractBufferingHandler fail
+SEVERE: Transport failed during protocol negotiation
+io.grpc.StatusRuntimeException: UNAVAILABLE: Channel closed while performing protocol negotiation
+	at io.grpc.Status.asRuntimeException(Status.java:428)
+	at io.grpc.transport.netty.ProtocolNegotiators.unavailableException(ProtocolNegotiators.java:175)
+	at io.grpc.transport.netty.ProtocolNegotiators.access$000(ProtocolNegotiators.java:72)
+	at io.grpc.transport.netty.ProtocolNegotiators$AbstractBufferingHandler.close(ProtocolNegotiators.java:261)
+	at io.netty.channel.ChannelHandlerInvokerUtil.invokeCloseNow(ChannelHandlerInvokerUtil.java:133)
+	at io.netty.channel.DefaultChannelHandlerInvoker$13.run(DefaultChannelHandlerInvoker.java:281)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:322)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:356)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:703)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+]]></system-err>
+</testsuite>

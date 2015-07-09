@@ -1,0 +1,4 @@
+package io.grpc.benchmarks.netty.generated;
+public class StreamingPingPongsPerSecondBenchmark_AdditionalCounters_jmh extends StreamingPingPongsPerSecondBenchmark_AdditionalCounters_jmh_B3 {
+}
+

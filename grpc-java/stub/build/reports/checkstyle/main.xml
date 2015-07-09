@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="6.5">
+<file name="/home/xwu/Desktop/test/grpc-java/stub/src/main/java/io/grpc/stub/AbstractServiceDescriptor.java">
+</file>
+<file name="/home/xwu/Desktop/test/grpc-java/stub/src/main/java/io/grpc/stub/AbstractStub.java">
+</file>
+<file name="/home/xwu/Desktop/test/grpc-java/stub/src/main/java/io/grpc/stub/ClientCalls.java">
+</file>
+<file name="/home/xwu/Desktop/test/grpc-java/stub/src/main/java/io/grpc/stub/MetadataUtils.java">
+</file>
+<file name="/home/xwu/Desktop/test/grpc-java/stub/src/main/java/io/grpc/stub/Method.java">
+</file>
+<file name="/home/xwu/Desktop/test/grpc-java/stub/src/main/java/io/grpc/stub/ServerCalls.java">
+</file>
+<file name="/home/xwu/Desktop/test/grpc-java/stub/src/main/java/io/grpc/stub/StreamObserver.java">
+</file>
+<file name="/home/xwu/Desktop/test/grpc-java/stub/src/main/java/io/grpc/stub/StreamRecorder.java">
+</file>
+</checkstyle>

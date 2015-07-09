@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="io.grpc.transport.MessageFramerTest" tests="14" skipped="0" failures="0" errors="0" timestamp="2015-06-29T02:21:48" hostname="xwu-desktop" time="0.023">
+  <properties/>
+  <testcase name="flushIsIdempotent" classname="io.grpc.transport.MessageFramerTest" time="0.007"/>
+  <testcase name="closeCombinedWithFullSink" classname="io.grpc.transport.MessageFramerTest" time="0.001"/>
+  <testcase name="emptyPayloadYieldsFrame" classname="io.grpc.transport.MessageFramerTest" time="0.001"/>
+  <testcase name="payloadSplitBetweenSinks" classname="io.grpc.transport.MessageFramerTest" time="0.002"/>
+  <testcase name="smallPayloadsShouldBeCombined" classname="io.grpc.transport.MessageFramerTest" time="0.001"/>
+  <testcase name="compressed" classname="io.grpc.transport.MessageFramerTest" time="0.002"/>
+  <testcase name="largerFrameSize" classname="io.grpc.transport.MessageFramerTest" time="0.001"/>
+  <testcase name="closeWithoutBufferedFrameGivesNullBuffer" classname="io.grpc.transport.MessageFramerTest" time="0.001"/>
+  <testcase name="simpleUnknownLengthPayload" classname="io.grpc.transport.MessageFramerTest" time="0.001"/>
+  <testcase name="frameHeaderSplitBetweenSinks" classname="io.grpc.transport.MessageFramerTest" time="0.001"/>
+  <testcase name="closeIsRentrantSafe" classname="io.grpc.transport.MessageFramerTest" time="0.001"/>
+  <testcase name="largerFrameSizeUnknownLength" classname="io.grpc.transport.MessageFramerTest" time="0.002"/>
+  <testcase name="emptyUnknownLengthPayloadYieldsFrame" classname="io.grpc.transport.MessageFramerTest" time="0.001"/>
+  <testcase name="simplePayload" classname="io.grpc.transport.MessageFramerTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,34 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1435401994150
+Build-Jdk: 1.7.0_79
+Built-By: xwu
+Bundle-Description: Netty is an asynchronous event-driven network applic
+ ation framework for    rapid development of maintainable high performan
+ ce protocol servers and    clients.
+Bundle-DocURL: http://netty.io/
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Netty/Codec/HTTP2
+Bundle-SymbolicName: io.netty.codec-http2
+Bundle-Vendor: The Netty Project
+Bundle-Version: 4.1.0.Beta5
+Created-By: Apache Maven Bundle Plugin
+Export-Package: io.netty.handler.codec.http2;version="4.1.0.Beta5";uses:
+ ="io.netty.buffer,io.netty.channel,io.netty.channel.embedded,io.netty.h
+ andler.codec,io.netty.handler.codec.http,io.netty.handler.logging,io.ne
+ tty.util,io.netty.util.collection,io.netty.util.concurrent,javax.net.ss
+ l"
+Import-Package: com.twitter.hpack;version="[0.11,1)",io.netty.buffer;ver
+ sion="[4.1,5)",io.netty.channel;version="[4.1,5)",io.netty.channel.embe
+ dded;version="[4.1,5)",io.netty.handler.codec;version="[4.1,5)",io.nett
+ y.handler.codec.base64;version="[4.1,5)",io.netty.handler.codec.compres
+ sion;version="[4.1,5)",io.netty.handler.codec.http;version="[4.1,5)",io
+ .netty.handler.logging;version="[4.1,5)",io.netty.handler.ssl;version="
+ [4.1,5)",io.netty.util;version="[4.1,5)",io.netty.util.collection;versi
+ on="[4.1,5)",io.netty.util.concurrent;version="[4.1,5)",io.netty.util.i
+ nternal;version="[4.1,5)",io.netty.util.internal.logging;version="[4.1,
+ 5)",javax.net.ssl,org.eclipse.jetty.npn;version="[1,2)";resolution:=opt
+ ional,org.eclipse.jetty.alpn;version="[1,2)";resolution:=optional,sun.n
+ io.ch;resolution:=optional
+Originally-Created-By: Apache Maven Bundle Plugin
+Tool: Bnd-2.1.0.20130426-122213

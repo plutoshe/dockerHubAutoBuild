@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="io.grpc.transport.okhttp.OkHttpClientTransportTest" tests="35" skipped="0" failures="0" errors="0" timestamp="2015-06-29T02:22:16" hostname="xwu-desktop" time="0.788">
+  <properties/>
+  <testcase name="outboundFlowControl" classname="io.grpc.transport.okhttp.OkHttpClientTransportTest" time="0.337"/>
+  <testcase name="readMessages" classname="io.grpc.transport.okhttp.OkHttpClientTransportTest" time="0.032"/>
+  <testcase name="cancelStream" classname="io.grpc.transport.okhttp.OkHttpClientTransportTest" time="0.003"/>
+  <testcase name="windowUpdateWithInboundFlowControl" classname="io.grpc.transport.okhttp.OkHttpClientTransportTest" time="0.004"/>
+  <testcase name="receiveDataWithoutHeaderAndTrailer" classname="io.grpc.transport.okhttp.OkHttpClientTransportTest" time="0.003"/>
+  <testcase name="outboundFlowControlWithInitialWindowSizeChange" classname="io.grpc.transport.okhttp.OkHttpClientTransportTest" time="0.004"/>
+  <testcase name="ping_failsIfTransportFails" classname="io.grpc.transport.okhttp.OkHttpClientTransportTest" time="0.013"/>
+  <testcase name="notifyOnReady" classname="io.grpc.transport.okhttp.OkHttpClientTransportTest" time="0.003"/>
+  <testcase name="windowUpdate" classname="io.grpc.transport.okhttp.OkHttpClientTransportTest" time="0.005"/>
+  <testcase name="receiveReset" classname="io.grpc.transport.okhttp.OkHttpClientTransportTest" time="0.002"/>
+  <testcase name="invalidInboundHeadersCancelStream" classname="io.grpc.transport.okhttp.OkHttpClientTransportTest" time="0.012"/>
+  <testcase name="serverStreamingHeadersShouldNotBeFlushed" classname="io.grpc.transport.okhttp.OkHttpClientTransportTest" time="0.003"/>
+  <testcase name="writeMessage" classname="io.grpc.transport.okhttp.OkHttpClientTransportTest" time="0.004"/>
+  <testcase name="receivingWindowExceeded" classname="io.grpc.transport.okhttp.OkHttpClientTransportTest" time="0.003"/>
+  <testcase name="shouldBeInitiallyReady" classname="io.grpc.transport.okhttp.OkHttpClientTransportTest" time="0.002"/>
+  <testcase name="readStatus" classname="io.grpc.transport.okhttp.OkHttpClientTransportTest" time="0.003"/>
+  <testcase name="streamIdExhausted" classname="io.grpc.transport.okhttp.OkHttpClientTransportTest" time="0.005"/>
+  <testcase name="receiveDataForUnknownStreamUpdateConnectionWindow" classname="io.grpc.transport.okhttp.OkHttpClientTransportTest" time="0.003"/>
+  <testcase name="ping" classname="io.grpc.transport.okhttp.OkHttpClientTransportTest" time="0.003"/>
+  <testcase name="stopNormally" classname="io.grpc.transport.okhttp.OkHttpClientTransportTest" time="0.018"/>
+  <testcase name="receiveLongEnoughDataWithoutHeaderAndTrailer" classname="io.grpc.transport.okhttp.OkHttpClientTransportTest" time="0.002"/>
+  <testcase name="duplexStreamingHeadersShouldNotBeFlushed" classname="io.grpc.transport.okhttp.OkHttpClientTransportTest" time="0.005"/>
+  <testcase name="receiveDataWithoutHeader" classname="io.grpc.transport.okhttp.OkHttpClientTransportTest" time="0.004"/>
+  <testcase name="receivedHeadersForInvalidStreamShouldKillConnection" classname="io.grpc.transport.okhttp.OkHttpClientTransportTest" time="0.002"/>
+  <testcase name="ping_failsWhenTransportShutdown" classname="io.grpc.transport.okhttp.OkHttpClientTransportTest" time="0.002"/>
+  <testcase name="receiveGoAway" classname="io.grpc.transport.okhttp.OkHttpClientTransportTest" time="0.015"/>
+  <testcase name="clientStreamingHeadersShouldBeFlushed" classname="io.grpc.transport.okhttp.OkHttpClientTransportTest" time="0.003"/>
+  <testcase name="nextFrameThrowIoException" classname="io.grpc.transport.okhttp.OkHttpClientTransportTest" time="0.006"/>
+  <testcase name="receivedDataForInvalidStreamShouldKillConnection" classname="io.grpc.transport.okhttp.OkHttpClientTransportTest" time="0.005"/>
+  <testcase name="receiveWindowUpdateForUnknownStream" classname="io.grpc.transport.okhttp.OkHttpClientTransportTest" time="0.004"/>
+  <testcase name="pendingStreamSucceed" classname="io.grpc.transport.okhttp.OkHttpClientTransportTest" time="0.054"/>
+  <testcase name="unaryHeadersShouldNotBeFlushed" classname="io.grpc.transport.okhttp.OkHttpClientTransportTest" time="0.004"/>
+  <testcase name="pendingStreamFailedByGoAway" classname="io.grpc.transport.okhttp.OkHttpClientTransportTest" time="0.053"/>
+  <testcase name="pendingStreamFailedByIdExhausted" classname="io.grpc.transport.okhttp.OkHttpClientTransportTest" time="0.106"/>
+  <testcase name="pendingStreamFailedByShutdown" classname="io.grpc.transport.okhttp.OkHttpClientTransportTest" time="0.055"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Jun 29, 2015 10:22:16 AM io.grpc.transport.okhttp.OkHttpClientTransport onIoException
+SEVERE: Transport failed
+java.io.IOException
+	at io.grpc.transport.okhttp.OkHttpClientTransportTest.ping_failsIfTransportFails(OkHttpClientTransportTest.java:955)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:86)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:49)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:64)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:50)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.messaging.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.messaging.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:106)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.messaging.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:360)
+	at org.gradle.internal.concurrent.DefaultExecutorFactory$StoppableExecutorImpl$1.run(DefaultExecutorFactory.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+Jun 29, 2015 10:22:16 AM io.grpc.transport.okhttp.OkHttpClientTransport$ClientFrameHandler ping
+WARNING: Received unexpected ping ack. Expecting -4113482647571182650, got -4113482647571182651
+]]></system-err>
+</testsuite>

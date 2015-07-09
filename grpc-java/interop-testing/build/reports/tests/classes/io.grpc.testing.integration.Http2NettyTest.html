@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class io.grpc.testing.integration.Http2NettyTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class io.grpc.testing.integration.Http2NettyTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/io.grpc.testing.integration.html">io.grpc.testing.integration</a> &gt; Http2NettyTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">17</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">2.935s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">cancelAfterBegin</td>
+<td>0.032s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">cancelAfterFirstResponse</td>
+<td>0.055s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">clientStreaming</td>
+<td>0.033s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">emptyStream</td>
+<td>0.045s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">emptyUnary</td>
+<td>0.038s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">exchangeContextStreamingCall</td>
+<td>0.030s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">exchangeContextUnaryCall</td>
+<td>0.032s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">fullDuplexCallShouldSucceed</td>
+<td>0.032s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">gracefulShutdown</td>
+<td>0.077s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">halfDuplexCallShouldSucceed</td>
+<td>0.028s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">largeUnary</td>
+<td>0.055s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">pingPong</td>
+<td>0.126s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">sendsTimeoutHeader</td>
+<td>0.024s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">serverStreaming</td>
+<td>0.031s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">serverStreamingShouldBeFlowControlled</td>
+<td>0.139s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">veryLargeRequest</td>
+<td>1.117s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">veryLargeResponse</td>
+<td>1.041s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>Jun 29, 2015 10:22:05 AM io.grpc.transport.netty.ProtocolNegotiators$AbstractBufferingHandler fail
+SEVERE: Transport failed during protocol negotiation
+io.grpc.StatusRuntimeException: UNAVAILABLE: Channel closed while performing protocol negotiation
+	at io.grpc.Status.asRuntimeException(Status.java:428)
+	at io.grpc.transport.netty.ProtocolNegotiators.unavailableException(ProtocolNegotiators.java:175)
+	at io.grpc.transport.netty.ProtocolNegotiators.access$000(ProtocolNegotiators.java:72)
+	at io.grpc.transport.netty.ProtocolNegotiators$AbstractBufferingHandler.close(ProtocolNegotiators.java:261)
+	at io.netty.channel.ChannelHandlerInvokerUtil.invokeCloseNow(ChannelHandlerInvokerUtil.java:133)
+	at io.netty.channel.DefaultChannelHandlerInvoker$13.run(DefaultChannelHandlerInvoker.java:281)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:322)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:356)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:703)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 2.3</a> at Jun 29, 2015 10:22:08 AM</p>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+com.google.protobuf
+io.grpc
+io.grpc.auth
+io.grpc.benchmarks.qps
+io.grpc.examples.header
+io.grpc.examples.helloworld
+io.grpc.examples.routeguide
+io.grpc.examples.test
+io.grpc.protobuf
+io.grpc.protobuf.nano
+io.grpc.stub
+io.grpc.testing
+io.grpc.testing.integration
+io.grpc.transport
+io.grpc.transport.netty
+io.grpc.transport.okhttp
+mapreduce

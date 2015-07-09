@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="io.grpc.testing.integration.Http2NettyLocalChannelTest" tests="17" skipped="0" failures="0" errors="0" timestamp="2015-06-29T02:22:00" hostname="xwu-desktop" time="2.101">
+  <properties/>
+  <testcase name="veryLargeRequest" classname="io.grpc.testing.integration.Http2NettyLocalChannelTest" time="0.655"/>
+  <testcase name="veryLargeResponse" classname="io.grpc.testing.integration.Http2NettyLocalChannelTest" time="0.938"/>
+  <testcase name="exchangeContextUnaryCall" classname="io.grpc.testing.integration.Http2NettyLocalChannelTest" time="0.036"/>
+  <testcase name="emptyUnary" classname="io.grpc.testing.integration.Http2NettyLocalChannelTest" time="0.011"/>
+  <testcase name="pingPong" classname="io.grpc.testing.integration.Http2NettyLocalChannelTest" time="0.251"/>
+  <testcase name="clientStreaming" classname="io.grpc.testing.integration.Http2NettyLocalChannelTest" time="0.013"/>
+  <testcase name="fullDuplexCallShouldSucceed" classname="io.grpc.testing.integration.Http2NettyLocalChannelTest" time="0.014"/>
+  <testcase name="sendsTimeoutHeader" classname="io.grpc.testing.integration.Http2NettyLocalChannelTest" time="0.006"/>
+  <testcase name="serverStreamingShouldBeFlowControlled" classname="io.grpc.testing.integration.Http2NettyLocalChannelTest" time="0.032"/>
+  <testcase name="gracefulShutdown" classname="io.grpc.testing.integration.Http2NettyLocalChannelTest" time="0.054"/>
+  <testcase name="serverStreaming" classname="io.grpc.testing.integration.Http2NettyLocalChannelTest" time="0.007"/>
+  <testcase name="cancelAfterFirstResponse" classname="io.grpc.testing.integration.Http2NettyLocalChannelTest" time="0.019"/>
+  <testcase name="cancelAfterBegin" classname="io.grpc.testing.integration.Http2NettyLocalChannelTest" time="0.002"/>
+  <testcase name="emptyStream" classname="io.grpc.testing.integration.Http2NettyLocalChannelTest" time="0.012"/>
+  <testcase name="halfDuplexCallShouldSucceed" classname="io.grpc.testing.integration.Http2NettyLocalChannelTest" time="0.014"/>
+  <testcase name="exchangeContextStreamingCall" classname="io.grpc.testing.integration.Http2NettyLocalChannelTest" time="0.014"/>
+  <testcase name="largeUnary" classname="io.grpc.testing.integration.Http2NettyLocalChannelTest" time="0.012"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
