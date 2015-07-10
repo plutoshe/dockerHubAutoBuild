@@ -70,28 +70,28 @@ func (*server) GetStreamEmitResult(stream pb.MapperStream_GetStreamEmitResultSer
 	for {
 		in, err := stream.Recv()
 		if err == io.EOF {
-			defer s.Stop()
+			// defer s.Stop()
 			return nil
 		}
 		if err != nil {
 			return err
 		}
-		if len(in.Arr) == 0 {
-			// server.Stop()
-			res := &pb.MapperResponse{
-				[]*pb.KvPair{
-					&pb.KvPair{
-						Key:   "Stop",
-						Value: "Stop",
-					},
-				},
-			}
-			if err := stream.Send(res); err != nil {
-				return err
-			}
-			// defer s.Stop()
-			return nil
-		}
+		// if len(in.Arr) == 0 {
+		// 	// server.Stop()
+		// 	res := &pb.MapperResponse{
+		// 		[]*pb.KvPair{
+		// 			&pb.KvPair{
+		// 				Key:   "Stop",
+		// 				Value: "Stop",
+		// 			},
+		// 		},
+		// 	}
+		// 	if err := stream.Send(res); err != nil {
+		// 		return err
+		// 	}
+		// 	// defer s.Stop()
+		// 	return nil
+		// }
 		var buf []*pb.KvPair
 		for _, v := range in.Arr {
 			str := v.Key
