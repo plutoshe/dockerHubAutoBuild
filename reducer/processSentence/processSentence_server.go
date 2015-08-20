@@ -8,7 +8,7 @@ import (
 	"net"
 	"unicode/utf8"
 
-	pb "../proto"
+	pb "github.com/plutoshe/dockerhubautobuild/reducer/proto"
 	"google.golang.org/grpc"
 )
 

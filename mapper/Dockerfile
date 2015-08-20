@@ -3,7 +3,7 @@ FROM golang
 ADD . /go/src/app
 WORKDIR /go/src/app
 RUN export GOPATH=$GOPATH:/go/src/app
-RUN go get -v -d
+RUN go get -v -d ./processSentence/
 RUN go get -v github.com/golang/protobuf/proto
 RUN go get -v golang.org/x/net/context
 RUN go get -v google.golang.org/grpc
