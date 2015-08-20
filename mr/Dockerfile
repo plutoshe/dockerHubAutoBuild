@@ -1,8 +1,9 @@
-FROM golang
+FROM jpetazzo/dind
 
+RUN sudo apt-get install golang -y
+ENV GOPATH /go/lib:/go/src/app
 ADD . /go/src/app
 WORKDIR /go/src/app
-RUN export GOPATH=$GOPATH:/go/src/app
 RUN go get -v -d
 RUN go get -v github.com/golang/protobuf/proto
 RUN go get -v golang.org/x/net/context

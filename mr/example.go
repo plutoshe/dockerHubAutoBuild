@@ -12,10 +12,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/plutoshe/mr/interface"
-	// "github.com/Azure/azure-sdk-for-go/storage"
-
 	"github.com/coreos/go-etcd/etcd"
+	mapreduce "github.com/plutoshe/mr/interface"
 	"github.com/plutoshe/taskgraph/controller"
 	"github.com/plutoshe/taskgraph/example/topo"
 	"github.com/plutoshe/taskgraph/filesystem"
@@ -32,7 +30,7 @@ type AzureFsConfiguration struct {
 
 type Configuration struct {
 	Type          string
-	ETCDBIN       string
+	ETCDURL       string
 	AppName       string
 	FSType        string
 	AzureConfig   AzureFsConfiguration
@@ -59,7 +57,7 @@ var (
 	finshedProgram chan struct{}
 	sourceConfig   = flag.String("source", "", "The configuration file")
 	logDir         = flag.String("logdir", "./logdir", "the output log file")
-	phase          = flag.String("phase", "", "The phase of application")
+	phase          = flag.String("phase", "i", "The phase of application")
 )
 
 func fsInit() {
@@ -93,9 +91,9 @@ func mapperWorkInit() {
 		newWork.InputFilePath = []string{inputFile}
 		newWork.OutputFilePath = []string{config.TmpResultDir}
 		newWork.UserProgram = []string{
-			"wc docker stop mr" + strconv.Itoa(i),
-			"wc docker rm mr" + strconv.Itoa(i),
-			"ww docker run -d -p " +
+			"wc sudo docker stop mr" + strconv.Itoa(i),
+			"wc sudo docker rm mr" + strconv.Itoa(i),
+			"ww sudo docker run -d -p " +
 				strconv.Itoa(20000+i) +
 				":" +
 				config.DockerPort +
@@ -121,9 +119,9 @@ func reducerWorkInit() {
 		newWork.OutputFilePath = []string{config.OutputDir + "/reducerOutput" + strconv.FormatUint(i, 10)}
 
 		newWork.UserProgram = []string{
-			"wc docker stop mr" + strconv.FormatUint(i, 10),
-			"wc docker rm mr" + strconv.FormatUint(i, 10),
-			"ww docker run -d -p " +
+			"wc sudo docker stop mr" + strconv.FormatUint(i, 10),
+			"wc sudo docker rm mr" + strconv.FormatUint(i, 10),
+			"ww sudo docker run -d -p " +
 				strconv.FormatUint(i+20000, 10) +
 				":" +
 				config.DockerPort +
@@ -140,15 +138,14 @@ func reducerWorkInit() {
 
 }
 
-func clean() {
-	cmd := exec.Command(config.ETCDBIN+"/etcdctl", "rm", "--recursive", config.AppName+"/")
-	cmd.Run()
+func clean(client *etcd.Client) {
+	client.Delete(config.AppName, true)
 }
 
 func mapperTaskInit() {
-	etcdURLs := []string{"http://localhost:4001"}
+	etcdURLs := []string{config.ETCDURL}
 	if *phase == "i" {
-		clean()
+		clean(etcd.NewClient(etcdURLs))
 	}
 	fsInit()
 	mapperWorkInit()
@@ -165,9 +162,9 @@ func mapperTaskInit() {
 }
 
 func reducerTaskInit() {
-	etcdURLs := []string{"http://localhost:4001"}
+	etcdURLs := []string{config.ETCDURL}
 	if *phase == "i" {
-		clean()
+		clean(etcd.NewClient(etcdURLs))
 	}
 	fsInit()
 	reducerWorkInit()
@@ -263,14 +260,19 @@ func reducerTaskConfig(phase string) {
 		taskExec(phase, reducerConfig)
 	case "i":
 		log.Println("in dispatching")
-		controllerLog, err := os.Create("./logfile/controller.log")
+
 		subCom := strings.Fields("run example.go -phase c -source " + *sourceConfig)
 		controllerProcess := exec.Command("go", subCom...)
-		if err != nil {
-			log.Fatalln(err)
+
+		if *logDir != "" {
+			os.Mkdir(*logDir, os.ModePerm)
+			controllerLog, err := os.Create(*logDir + "/controller.log")
+			if err != nil {
+				log.Fatalln(err)
+			}
+			controllerProcess.Stdout = controllerLog
+			controllerProcess.Stderr = controllerLog
 		}
-		controllerProcess.Stdout = controllerLog
-		controllerProcess.Stderr = controllerLog
 
 		err = controllerProcess.Start()
 		if err != nil {
@@ -279,13 +281,15 @@ func reducerTaskConfig(phase string) {
 		time.Sleep(2000 * time.Millisecond)
 		for i := uint64(0); i < 1+config.WorkerNum+config.Tolerance; i++ {
 			subCom := strings.Fields("run example.go -phase t -source " + *sourceConfig)
-			taskiLog, err := os.Create("./logfile/task" + strconv.FormatUint(i, 10) + ".log")
-			if err != nil {
-				log.Fatalln(err)
-			}
 			taski := exec.Command("go", subCom...)
-			taski.Stdout = taskiLog
-			taski.Stderr = taskiLog
+			if *logDir != "" {
+				taskiLog, err := os.Create(*logDir + "/task" + strconv.FormatUint(i, 10) + ".log")
+				if err != nil {
+					log.Fatalln(err)
+				}
+				taski.Stdout = taskiLog
+				taski.Stderr = taskiLog
+			}
 
 			taski.Start()
 		}
@@ -305,7 +309,7 @@ func main() {
 	if *sourceConfig == "" {
 		log.Fatalf("Please specify a configuration file")
 	}
-	if *phase == "" {
+	if *phase != "c" && *phase != "i" && *phase != "t" {
 		log.Fatalf("Please specify a phase(i/c/t) \n i : a initialize phase, \n c : a conctorller pahse, \n t : an offspring pahse.")
 	}
 	file, _ := os.Open(*sourceConfig)
