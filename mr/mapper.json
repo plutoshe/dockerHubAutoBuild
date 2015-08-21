@@ -1,6 +1,6 @@
 {
   "Type" : "Mapper",
-  "ETCDBIN" : "/usr/local/golib/etcd-v2.0.5-darwin-amd64",
+  "ETCDURL" : "localhost:4001",
   "AppName" : "mapperEx",
   
   "InputFiles" : ["eee.txt","eee.txt", "eee.txt", "eee.txt", "eee.txt"],
@@ -17,7 +17,7 @@
   
   "TmpResultDir" : "./mapreducerprocesstemporaryresult",
 
-  "DockerIp" : "192.168.59.103",
+  "DockerIp" : "localhost",
   "DockerImage" : "plutoshe/dockerhubautobuild:mapper",
   "DockerPort" : "10000"
 }

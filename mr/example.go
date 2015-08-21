@@ -305,6 +305,9 @@ func createListener() net.Listener {
 }
 
 func main() {
+	subCom := strings.Fields("fdsfdsfds")
+	taski := exec.Command("echo", subCom...)
+	taski.Run()
 	flag.Parse()
 	if *sourceConfig == "" {
 		log.Fatalf("Please specify a configuration file")
@@ -330,5 +333,7 @@ func main() {
 	} else {
 		log.Println("Pleas specify the application type in configuration file")
 	}
-
+	subCom = strings.Fields("mapper.json")
+	taski = exec.Command("cat", subCom...)
+	taski.Run()
 }
