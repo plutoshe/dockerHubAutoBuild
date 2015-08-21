@@ -1,4 +1,3 @@
-FROM golang
 FROM ubuntu:14.04
 
 # Let's start with some basic stuff.
@@ -26,7 +25,9 @@ VOLUME /var/lib/docker
 # RUN add-apt-repository ppa:duh/golang
 # RUN apt-get update -qq
 # RUN apt-get install -qqy golang 
-
+RUN wget https://storage.googleapis.com/golang/go1.5.linux-amd64.tar.gz
+RUN tar -C /usr/local -xzf go1.5.linux-amd64.tar.gz
+ENV PATH $PATH:/usr/local/go/bin
 ENV GOPATH /go/lib:/go/src/app
 ADD . /go/src/app
 WORKDIR /go/src/app
@@ -40,5 +41,4 @@ RUN go get -v github.com/coreos/go-etcd/etcd
 RUN go get -v github.com/Azure/azure-sdk-for-go/storage
 RUN go get -v github.com/colinmarc/hdfs
 RUN go build -o mapreduce /go/src/app/example.go
-WORKDIR /usr/local/bin
-CMD ["wrapdocker"]
+CMD ["/usr/local/bin/wrapdocker"]
